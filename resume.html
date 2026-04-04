@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhav Sharma - Resume</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #0066ff;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #0066ff;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0066ff;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .entry-date {
+            color: #0066ff;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        .entry-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .entry-description {
+            color: #555;
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-category {
+            background-color: #f9f9f9;
+            padding: 12px;
+            border-left: 4px solid #0066ff;
+            border-radius: 4px;
+        }
+
+        .skill-category h4 {
+            color: #0066ff;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        .skill-category p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .highlights {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-left: 4px solid #0066ff;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .highlights ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .highlights li {
+            margin-bottom: 5px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #0066ff;
+            color: white;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #1a1a1a;
+            border: 2px solid #ddd;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e8e8e8;
+            border-color: #0066ff;
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .action-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <header>
+            <h1>MADHAV SHARMA</h1>
+            <p class="tagline">Software Developer | Full-Stack Engineer | Problem Solver</p>
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Firozabad, UP 283203</span>
+                <span><i class="fas fa-phone"></i> +91 96345 84859</span>
+                <span><i class="fas fa-envelope"></i> ms.madhavsharma00@gmail.com</span>
+                <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/madhav-sharma-8b6349205/" target="_blank" style="color: #0066ff; text-decoration: none;">LinkedIn</a></span>
+            </div>
+        </header>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="portfolio.html" class="btn btn-primary"><i class="fas fa-globe"></i> View Portfolio</a>
+            <button class="btn btn-secondary" onclick="window.print()"><i class="fas fa-download"></i> Download PDF</button>
+        </div>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2><i class="fas fa-user"></i> Professional Summary</h2>
+            <p>A budding software developer with passion for coding with strong computer science knowledge and hands-on development experience, including full stack. Proficient in Python, JavaScript and modern frameworks such as React and Node.js. Design web applications with machine learning and scale. Practical skills like competitive programming and hackathon successes.</p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Master of Computer Applications (MCA)</span>
+                    <span class="entry-date">2024 – Present</span>
+                </div>
+                <p class="entry-subtitle">GLA University, Mathura</p>
+                <p class="entry-description">Currently pursuing MCA with focus on software engineering, data structures, algorithms, and full-stack development</p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Bachelor of Science - Computer Science</span>
+                    <span class="entry-date">Graduated: July 2019</span>
+                </div>
+                <p class="entry-subtitle">J.S. University, Shikohabad</p>
+                <p class="entry-description"><strong>Core Coursework:</strong> Data Structures, Database Management Systems, Operating Systems, Object-Oriented Programming, Web Development</p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Intermediate (Class XII) - PCM</span>
+                    <span class="entry-date">May 2016</span>
+                </div>
+                <p class="entry-subtitle">Sant Param Dayal Inter College, Firozabad</p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">High School (Class X)</span>
+                    <span class="entry-date">May 2014</span>
+                </div>
+                <p class="entry-subtitle">Nandishwar V.M. Higher Secondary School, Firozabad</p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Hospital Beds & Services Availability System</span>
+                    <span class="entry-date">2024</span>
+                </div>
+                <p class="entry-subtitle">Personal Project</p>
+                <p class="entry-description">
+                    <strong>Description:</strong> Designed and developed a full-stack web application enabling real-time tracking of hospital bed availability, oxygen cylinders, and essential services. Improved accessibility to emergency health resources for users across Uttar Pradesh region.
+                </p>
+                <p class="entry-description">
+                    <strong>Technologies:</strong> Django, Python, MySQL, REST APIs, Real-time Data Synchronization
+                </p>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">AutoFreak – Car & Bike Rental Platform</span>
+                    <span class="entry-date">2025</span>
+                </div>
+                <p class="entry-subtitle">Personal Project</p>
+                <p class="entry-description">
+                    <strong>Description:</strong> Built a full-stack rental marketplace with separate user and admin dashboards, supporting vehicle listing, booking management, and user authentication. Features include vehicle search and filter, booking history, and an admin CRUD panel for fleet management.
+                </p>
+                <p class="entry-description">
+                    <strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB, JWT Authentication, RESTful APIs
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <p>Python • JavaScript • C++ • Java • SQL • HTML5 • CSS3</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <p>React.js • Next.js • HTML5 • CSS3 • Bootstrap</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <p>Node.js • Express.js • Django • REST APIs</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <p>PostgreSQL • MongoDB • MySQL • Prisma ORM • SQLite</p>
+                </div>
+                <div class="skill-category">
+                    <h4>DevOps / Cloud</h4>
+                    <p>Git / GitHub • Docker • AWS • Linux • CI/CD Basics</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <p>Leadership • Problem Solving • Communication • Team Collaboration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section>
+            <h2><i class="fas fa-trophy"></i> Achievements & Certifications</h2>
+            <div class="highlights">
+                <ul>
+                    <li><strong>Ranked 11th Nationally at Smart India Hackathon 2024</strong> – Selected among the Top 15 finalist teams out of thousands of national participants</li>
+                    <li><strong>250+ DSA Problems Solved on LeetCode</strong> – Comprehensive expertise in arrays, graphs, dynamic programming, and trees</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
